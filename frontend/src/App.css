@@ -1,0 +1,914 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  background-color: #fff8f0;
+  color: #333;
+}
+
+
+/* =========================
+   NAVIGATION BAR
+========================= */
+
+nav {
+  background-color: #8b4513;
+  color: white;
+  padding: 18px 40px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+nav h2 {
+  margin: 0;
+  font-size: 24px;
+}
+
+nav a {
+  color: white;
+  text-decoration: none;
+  margin-left: 20px;
+  font-weight: bold;
+}
+
+nav a:hover {
+  text-decoration: underline;
+}
+
+
+/* =========================
+   CUSTOMER HOME
+========================= */
+
+.container {
+  padding: 50px 30px;
+  text-align: center;
+}
+
+.container h1 {
+  font-size: 36px;
+  color: #8b4513;
+  margin-bottom: 15px;
+}
+
+
+/* =========================
+   SWEET PRODUCTS
+========================= */
+
+.sweets {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  justify-content: center;
+}
+
+.card {
+  width: 220px;
+  padding: 22px;
+  background: white;
+  border-radius: 12px;
+  text-align: center;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+  transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+}
+
+.card h3 {
+  color: #8b4513;
+}
+
+.sweet-image {
+  width: 100%;
+  height: 180px;
+  margin-bottom: 15px;
+  background-color: #fff8f0;
+  border-radius: 10px;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.sweet-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+
+/* =========================
+   SWEET CARD BUTTONS
+========================= */
+
+.card button {
+  background-color: #8b4513;
+  color: white;
+  border: none;
+  padding: 11px 20px;
+  margin-top: 12px;
+  border-radius: 6px;
+  cursor: pointer;
+  font-size: 15px;
+  font-weight: bold;
+  transition: background-color 0.2s;
+}
+
+.card button:hover {
+  background-color: #6f350f;
+}
+
+.card > div {
+  margin: 15px 0;
+}
+
+.card > div button {
+  margin: 0 5px;
+  padding: 6px 12px;
+  background-color: #f1e0d0;
+  color: #8b4513;
+  border: 1px solid #d2b48c;
+  border-radius: 5px;
+  font-size: 16px;
+  font-weight: bold;
+}
+
+.card > div button:hover {
+  background-color: #e6ccb3;
+}
+
+
+/* =========================
+   CART
+========================= */
+
+.cart {
+  margin: 40px auto;
+  padding: 25px;
+  max-width: 700px;
+  background: white;
+  border-radius: 10px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+}
+
+.cart h1 {
+  color: #8b4513;
+  margin-bottom: 25px;
+}
+
+.cart-item {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 15px;
+  padding: 18px;
+  margin: 10px 0;
+  border: 1px solid #eee;
+  border-radius: 8px;
+  background-color: #fffaf5;
+}
+
+.cart-item button {
+  padding: 8px 14px;
+  margin: 0 5px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 16px;
+}
+
+.cart-total {
+  text-align: right;
+  margin-top: 20px;
+  padding-top: 15px;
+  border-top: 2px solid #8b4513;
+  font-size: 26px;
+  color: #8b4513;
+}
+
+
+/* =========================
+   CHECKOUT BUTTON
+========================= */
+
+.checkout-btn {
+  display: block;
+  margin: 20px 0 0 auto;
+  padding: 13px 28px;
+  border: none;
+  border-radius: 7px;
+  background-color: #8b4513;
+  color: white;
+  font-size: 16px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background-color 0.2s, transform 0.2s;
+}
+
+.checkout-btn:hover {
+  background-color: #6f350f;
+  transform: translateY(-2px);
+}
+
+
+/* =========================
+   CHECKOUT
+========================= */
+
+.checkout {
+  max-width: 500px;
+  margin: 40px auto;
+  padding: 25px;
+  background: white;
+  border-radius: 10px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+}
+
+.checkout h1 {
+  text-align: center;
+  margin-bottom: 25px;
+}
+
+.checkout-title {
+  color: #8b4513;
+}
+
+.checkout input,
+.checkout textarea {
+  width: 100%;
+  padding: 13px;
+  margin-bottom: 15px;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  box-sizing: border-box;
+  font-size: 15px;
+}
+
+.checkout input:focus,
+.checkout textarea:focus {
+  outline: none;
+  border-color: #8b4513;
+  box-shadow: 0 0 0 2px rgba(139, 69, 19, 0.1);
+}
+
+.checkout textarea {
+  height: 100px;
+  resize: vertical;
+}
+
+.checkout button {
+  width: 100%;
+  padding: 12px;
+  border: none;
+  border-radius: 5px;
+  background-color: #e91e63;
+  color: white;
+  font-size: 16px;
+  cursor: pointer;
+}
+
+
+/* =========================
+   ORDER TRACKING
+========================= */
+
+.order-tracking {
+  max-width: 700px;
+  margin: 50px auto;
+  padding: 40px 25px;
+  text-align: center;
+  background: white;
+  border-radius: 12px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+}
+
+.order-tracking h1 {
+  color: #8b4513;
+  font-size: 36px;
+  margin-bottom: 30px;
+}
+
+.order-tracking input {
+  width: 60%;
+  padding: 12px;
+  box-sizing: border-box;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  font-size: 16px;
+  color: #333;
+  background-color: white;
+}
+
+.order-tracking input:focus {
+  outline: none;
+  border-color: #8b4513;
+}
+
+.order-tracking > button {
+  padding: 12px 20px;
+  margin-left: 8px;
+  border: none;
+  border-radius: 6px;
+  background-color: #8b4513;
+  color: white;
+  font-size: 16px;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.order-tracking > button:hover {
+  background-color: #6f350f;
+}
+
+.order-tracking h2,
+.order-tracking h3 {
+  color: #8b4513;
+}
+
+.order-tracking p {
+  color: #333;
+}
+
+.order-status {
+  margin: 20px auto;
+  max-width: 400px;
+  text-align: left;
+}
+
+.order-status p {
+  padding: 12px 15px;
+  margin: 10px 0;
+  border-radius: 8px;
+  border: 1px solid #ddd;
+}
+
+.order-status .active {
+  font-weight: bold;
+  border: 2px solid #333;
+}
+
+
+/* ==================================================
+   ADMIN PANEL
+================================================== */
+
+.admin-page {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 35px 30px 60px;
+}
+
+.admin-panel-title {
+  margin: 0;
+  font-size: 38px;
+  color: #6f350f;
+  font-weight: 700;
+}
+
+.admin-page > p {
+  margin-top: 8px;
+  color: #777;
+  font-size: 16px;
+}
+
+
+/* =========================
+   ADMIN LOGOUT
+========================= */
+
+.logout-btn {
+  padding: 10px 22px;
+  margin: 5px 0 35px;
+  border: none;
+  border-radius: 7px;
+  background-color: #333;
+  color: white;
+  cursor: pointer;
+  font-weight: bold;
+  transition: 0.2s;
+}
+
+.logout-btn:hover {
+  background-color: #111;
+}
+
+
+/* =========================
+   ADMIN SECTION TITLES
+========================= */
+
+.admin-page > h2 {
+  margin-top: 45px;
+  margin-bottom: 20px;
+  padding-bottom: 10px;
+  border-bottom: 2px solid #ead6c3;
+  color: #6f350f;
+  font-size: 26px;
+}
+
+.admin-section-title {
+  margin-top: 0 !important;
+}
+
+
+/* =========================
+   ADD NEW SWEET
+========================= */
+
+.admin-page > input {
+  padding: 12px 14px;
+  margin: 5px;
+  border: 1px solid #d6c7bb;
+  border-radius: 7px;
+  background-color: white;
+  font-size: 15px;
+}
+
+.admin-page > input:focus {
+  outline: none;
+  border-color: #8b4513;
+  box-shadow: 0 0 0 3px rgba(139, 69, 19, 0.08);
+}
+
+.admin-page > input[type="file"] {
+  padding: 10px;
+  background-color: #fff;
+}
+
+.admin-page > button:not(.logout-btn) {
+  padding: 11px 20px;
+  margin: 5px;
+  border: none;
+  border-radius: 7px;
+  background-color: #8b4513;
+  color: white;
+  font-weight: bold;
+  cursor: pointer;
+  transition: 0.2s;
+}
+
+.admin-page > button:not(.logout-btn):hover {
+  background-color: #6f350f;
+  transform: translateY(-1px);
+}
+
+
+/* =========================
+   EXISTING SWEETS
+========================= */
+
+.sweet-admin-card {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  flex-wrap: wrap;
+
+  padding: 18px 20px;
+  margin: 12px 0;
+
+  background-color: white;
+  border: 1px solid #eadfd6;
+  border-radius: 10px;
+
+  box-shadow: 0 3px 12px rgba(0, 0, 0, 0.06);
+
+  transition: 0.2s;
+}
+
+.sweet-admin-card:hover {
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.09);
+}
+
+.sweet-admin-card span {
+  min-width: 280px;
+  flex: 1;
+  font-size: 16px;
+  font-weight: bold;
+  color: #4a2b1a;
+}
+
+.sweet-admin-card br {
+  display: none;
+}
+
+.sweet-admin-card input[type="file"] {
+  padding: 8px;
+  border: 1px solid #ddd;
+  border-radius: 6px;
+  background-color: #fafafa;
+}
+
+.sweet-admin-card button {
+  padding: 9px 13px;
+  margin: 0;
+  border: none;
+  border-radius: 6px;
+  background-color: #8b4513;
+  color: white;
+  font-weight: bold;
+  cursor: pointer;
+  transition: 0.2s;
+}
+
+.sweet-admin-card button:hover {
+  background-color: #6f350f;
+}
+
+.sweet-admin-card button:nth-last-child(4) {
+  background-color: #d9534f;
+}
+
+.sweet-admin-card button:nth-last-child(4):hover {
+  background-color: #b52b27;
+}
+
+
+/* =========================
+   SALES DASHBOARD
+========================= */
+
+.dashboard-cards {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+  margin: 20px 0 40px;
+}
+
+.dashboard-card {
+  position: relative;
+  padding: 28px 20px;
+  background: white;
+  border: 1px solid #eadfd6;
+  border-radius: 14px;
+  text-align: center;
+  box-shadow: 0 5px 18px rgba(0, 0, 0, 0.07);
+  transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.dashboard-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 9px 24px rgba(0, 0, 0, 0.11);
+}
+
+.dashboard-card h3 {
+  margin: 0 0 12px;
+  color: #777;
+  font-size: 16px;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.dashboard-card p {
+  margin: 0;
+  color: #8b4513;
+  font-size: 32px;
+  font-weight: bold;
+}
+
+
+/* =========================
+   CUSTOMER ORDERS TABLE
+========================= */
+
+.orders-table-container {
+  background: white;
+  border: 1px solid #eadfd6;
+  border-radius: 12px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.06);
+}
+
+.orders-table {
+  width: 100%;
+  border-collapse: collapse;
+  overflow: hidden;
+}
+
+.orders-table th {
+  padding: 15px 12px;
+  background-color: #8b4513;
+  color: white;
+  text-align: left;
+  font-size: 14px;
+}
+
+.orders-table td {
+  padding: 14px 12px;
+  border-bottom: 1px solid #eee;
+  font-size: 14px;
+  color: #444;
+}
+
+.orders-table tbody tr:hover {
+  background-color: #fff8f0;
+}
+
+.orders-table tbody tr:last-child td {
+  border-bottom: none;
+}
+
+.orders-table select {
+  padding: 8px 10px;
+  border: 1px solid #d5c7bd;
+  border-radius: 6px;
+  background-color: white;
+  font-size: 13px;
+  cursor: pointer;
+}
+
+.orders-table select:focus {
+  outline: none;
+  border-color: #8b4513;
+}
+
+.orders-table button {
+  padding: 8px 14px;
+  border: none;
+  border-radius: 6px;
+  background-color: #8b4513;
+  color: white;
+  font-weight: bold;
+  cursor: pointer;
+  transition: 0.2s;
+}
+
+.orders-table button:hover {
+  background-color: #6f350f;
+}
+
+
+/* =========================
+   ORDER DETAILS
+========================= */
+
+.order-details {
+  background-color: white;
+  border: 1px solid #eadfd6 !important;
+  border-radius: 12px !important;
+  box-shadow: 0 5px 18px rgba(0, 0, 0, 0.07);
+  margin-top: 25px !important;
+  margin-bottom: 40px;
+}
+
+.order-details h2 {
+  margin-top: 0;
+  color: #6f350f;
+}
+
+.order-details h3 {
+  color: #8b4513;
+  margin-top: 25px;
+}
+
+.order-details p {
+  color: #555;
+  line-height: 1.6;
+}
+
+.order-details button {
+  padding: 8px 16px;
+  border: none;
+  border-radius: 6px;
+  background-color: #333;
+  color: white;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.order-details button:hover {
+  background-color: #111;
+}
+
+
+/* =========================
+   ADMIN LOGIN
+========================= */
+
+.admin-login {
+  max-width: 420px;
+  margin: 80px auto;
+  padding: 40px 35px;
+
+  background-color: white;
+  border: 1px solid #eadfd6;
+  border-radius: 15px;
+
+  box-shadow: 0 8px 30px rgba(0, 0, 0, 0.1);
+
+  text-align: center;
+}
+
+.admin-login-title {
+  margin-top: 0;
+  margin-bottom: 30px;
+  color: #6f350f;
+  font-size: 30px;
+}
+
+.admin-login input {
+  display: block;
+  width: 100%;
+  box-sizing: border-box;
+
+  padding: 13px 14px;
+  margin: 12px 0;
+
+  border: 1px solid #d6c7bb;
+  border-radius: 7px;
+
+  font-size: 15px;
+  background-color: #fff;
+}
+
+.admin-login input:focus {
+  outline: none;
+  border-color: #8b4513;
+  box-shadow: 0 0 0 3px rgba(139, 69, 19, 0.08);
+}
+
+.admin-login button {
+  width: 100%;
+  padding: 13px;
+  margin-top: 12px;
+
+  border: none;
+  border-radius: 7px;
+
+  background-color: #8b4513;
+  color: white;
+
+  font-size: 16px;
+  font-weight: bold;
+
+  cursor: pointer;
+  transition: 0.2s;
+}
+
+.admin-login button:hover {
+  background-color: #6f350f;
+}
+
+
+/* =========================
+   MOBILE RESPONSIVE
+========================= */
+
+@media (max-width: 768px) {
+
+  nav {
+    padding: 15px 20px;
+    flex-direction: column;
+    gap: 12px;
+  }
+
+  nav h2 {
+    font-size: 20px;
+  }
+
+  nav a {
+    margin-left: 10px;
+    margin-right: 10px;
+    font-size: 14px;
+  }
+
+  .container {
+    padding: 30px 15px;
+  }
+
+  .container h1 {
+    font-size: 28px;
+  }
+
+  .card {
+    width: 100%;
+    max-width: 320px;
+  }
+
+  .cart {
+    margin: 30px 15px;
+  }
+
+  .cart-item {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .checkout {
+    margin: 30px 15px;
+  }
+
+  .order-tracking {
+    margin: 30px 15px;
+    padding: 30px 20px;
+  }
+
+  .order-tracking h1 {
+    font-size: 28px;
+  }
+
+  .order-tracking input {
+    width: 100%;
+    margin-bottom: 10px;
+  }
+
+  .order-tracking > button {
+    width: 100%;
+    margin-left: 0;
+  }
+
+
+  /* ADMIN MOBILE */
+
+  .admin-page {
+    padding: 25px 15px 50px;
+  }
+
+  .admin-panel-title {
+    font-size: 30px;
+  }
+
+  .admin-page > input {
+    width: calc(100% - 10px);
+    margin: 5px;
+  }
+
+  .admin-page > button:not(.logout-btn) {
+    width: calc(100% - 10px);
+    margin: 5px;
+  }
+
+  .sweet-admin-card {
+    align-items: stretch;
+    flex-direction: column;
+  }
+
+  .sweet-admin-card span {
+    min-width: 0;
+  }
+
+  .sweet-admin-card input[type="file"] {
+    width: 100%;
+  }
+
+  .sweet-admin-card button {
+    width: 100%;
+  }
+
+  .dashboard-cards {
+    grid-template-columns: 1fr;
+  }
+
+  .orders-table-container {
+    overflow-x: auto;
+  }
+
+  .orders-table {
+    min-width: 700px;
+  }
+
+  .order-details {
+    padding: 15px !important;
+  }
+
+  .admin-login {
+    margin: 50px 15px;
+    padding: 30px 20px;
+  }
+}/* =========================
+   ADMIN STATUS DROPDOWN
+========================= */
+
+.orders-table select {
+  appearance: auto;
+  width: 155px;
+  min-height: 40px;
+  padding: 8px 10px;
+  border: 1px solid #d8c8bd;
+  border-radius: 7px;
+  background-color: white;
+  font-size: 14px;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.orders-table select:focus {
+  outline: none;
+  border-color: #8b4513;
+  box-shadow: 0 0 0 2px rgba(139, 69, 19, 0.12);
+}
+
+.orders-table td {
+  vertical-align: middle;
+}
+
+.orders-table button {
+  white-space: nowrap;
+}
